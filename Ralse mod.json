@@ -1,0 +1,16 @@
+{
+	"id": "Ralse",
+	"name": "Ralse`s EPIC mod",
+	"display_name": "Ralse`s EPIC mod",
+	"author": ["Ralse"],
+	"description": "My own unbalanced mod for balala",
+	"prefix": "jeej",
+	"main_file": "Kapi.lua",
+	"priority": 114,
+	"badge_colour": "",
+	"badge_text_colour": "FFFFFF",
+	"version": "0.0.1proto",
+	"dependencies": [
+		"Steamodded (>=1.0.0~BETA-1224a)"
+         ]
+}
