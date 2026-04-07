@@ -16,6 +16,7 @@ SMODS.Joker {
     loc_vars = function (self, info_queue, card)
         return {vars = {card.ability.extra.money, card.ability.extra.money * ((G.deck and G.deck.cards) and #G.deck.cards or 52)}}
     end,
+    pools = {["Ralseaddtiton"] = true},
 
     calculate = function (self, card, context)
         if context.joker_main then

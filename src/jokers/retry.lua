@@ -16,6 +16,7 @@ SMODS.Joker {
     eternal_compat = true,
     perishable_compat = true,
     config={extra={discards = 25,hands = 1 }},
+    pools = {["Ralseaddtiton"] = true},
     loc_vars = function (self, info_queue, card)
         return {vars={card.ability.extra.discards,card.ability.extra.hands}}
     end,

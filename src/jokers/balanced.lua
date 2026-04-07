@@ -8,6 +8,7 @@ SMODS.Atlas {
 SMODS.Joker {
     key = 'balanced',
     atlas = 'placeholder',
+    pools = {["Ralseaddtiton"] = true},
     pos = {x=0,y=0},
     eternal_compat = true,
     perishable_compat = true,

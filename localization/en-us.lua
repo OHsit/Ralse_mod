@@ -60,7 +60,15 @@ return {
                     "Each round gain {C:Red}+#1#{} discards",
                     "but you have only {C:Blue}#2#{} hand"
                 }
-            }
+            },
+            j_jeej_czupa = {
+                name = "Czupa",
+                text = {
+                    "When theres a food card in one of your joker slots",
+                    "Its going to be eaten and this joker will gain {X:mult,C:white}X#2#",
+                    "(Currently {X:mult,C:white}X#1#{})"
+                }
+            },
         },
         Blind = {
             bl_jeej_FITH = {
@@ -69,7 +77,13 @@ return {
                     "After hand is played",
                     "destroy other cards in hand",
                 }
-            }
+            },
+            bl_jeej_parasite  = {
+                name = "Parasite",
+                text = {
+                    "Debuffs non-face cards"
+                }
+            },
         }
     }
 }

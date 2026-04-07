@@ -21,6 +21,7 @@ SMODS.Joker {
     loc_vars = function (self, info_queue, card)
         return {vars = {card.ability.extra.basedollar,card.ability.extra.gaindollar}}
     end,
+    pools = {["Ralseaddtiton"] = true},
 
 
     calculate = function (self, card, context)

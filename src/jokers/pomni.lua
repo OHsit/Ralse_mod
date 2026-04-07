@@ -26,6 +26,7 @@ SMODS.Joker{
             }
         } 
     end,
+    pools = {["Ralseaddtiton"] = true},
     calculate = function (self,card,context)
         if context.joker_main then
             return {

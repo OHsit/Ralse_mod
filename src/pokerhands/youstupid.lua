@@ -11,7 +11,7 @@ SMODS.PokerHand ({
         { 'S_5', false },
         { 'D_J', false, seal = 'Red' }
     },
-    loc_text = {
+    loc_txt = {
         name = "You stupid!",
         description = {"A hand containing a 2 and a ace"}
     },
@@ -61,7 +61,7 @@ SMODS.Consumable({
     set = "Planet",
     object_type = "Consumable",
     name = "jeej_planet21",
-    loc_text = {
+    loc_txt = {
         name = "Planet nr. 21",
         text = {
             "Whats 9+10?",

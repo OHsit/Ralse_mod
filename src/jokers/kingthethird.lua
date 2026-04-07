@@ -17,6 +17,7 @@ SMODS.Joker {
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,
+    pools = {["Ralseaddtiton"] = true},
 
     calculate = function (self, card, context)
         if context.setting_blind then

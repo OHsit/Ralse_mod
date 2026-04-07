@@ -21,7 +21,7 @@ SMODS.Joker {
     config = {extra = {xmultgain = 0.3,XMult = 1,specialnumber = 1}},
     rarity = 3,
     cost = 6,
-    blueprint_compat = true,
+    blueprint_compat = false,
     eternal_compat = true,
     perishable_compat = true,
     loc_vars = function (self,info_queue,card)
@@ -32,6 +32,7 @@ SMODS.Joker {
             }
         }
     end,
+    pools = {["Ralseaddtiton"] = true},
     calculate = function (self,card,context)
         if context.joker_main and not context.blueprint then
         card.ability.extra.specialnumber = math.random(1,2) 
