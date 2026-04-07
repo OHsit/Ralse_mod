@@ -21,8 +21,8 @@ SMODS.Joker {
        return{vars={card.ability.extra.xchips}} 
     end,
 
-    calculate = function (self,card,context) --taking code form baron, IT DOSENT WORK!?!?!?!?!?!?! HOW?!
-        if context.individual and context.cardarena == G.hand and not context.end_of_round and context.other_card:get_id() == 11  then
+    calculate = function (self,card,context) --nvm I fixed 
+        if context.individual and context.cardarea == G.hand and not context.end_of_round and context.other_card:get_id() == 11  then
  if context.other_card.debuff then
                 return {
                     message = localize('k_debuffed'),
@@ -30,6 +30,7 @@ SMODS.Joker {
                 }
             else
                 return {
+                    message = "X" .. card.ability.extra.xchips,
                     Xchip_mod = card.ability.extra.xchips
                 }
             end

@@ -17,7 +17,11 @@ SMODS.Joker {
         return {vars = {card.ability.extra.money, card.ability.extra.money * ((G.deck and G.deck.cards) and #G.deck.cards or 52)}}
     end,
 
-    calc_dollar_bonus = function (self,card)
-        return {card.ability.extra.money * #G.deck.cards}       
+    calculate = function (self, card, context)
+        if context.joker_main then
+            return {dollars = card.ability.extra.money *  #G.deck.cards}
+        end
     end
+
+    --calc_dollar_bonus = function (self,card) end
 }

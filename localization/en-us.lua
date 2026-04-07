@@ -57,8 +57,8 @@ return {
             j_jeej_bestahand = {
                 name = "Looking for best hand",
                 text = {
-                    "Each round gain {}{C:Red}+#1#{} discards",
-                    "but you have only {}{C:Blue}#2#{} hand"
+                    "Each round gain {C:Red}+#1#{} discards",
+                    "but you have only {C:Blue}#2#{} hand"
                 }
             }
         },
@@ -66,8 +66,8 @@ return {
             bl_jeej_FITH = {
                 name = "Fire In The Hole!",
                 text = {
-                    "Destorys 2 random",
-                    "cards per hand played",
+                    "After hand is played",
+                    "destroy other cards in hand",
                 }
             }
         }

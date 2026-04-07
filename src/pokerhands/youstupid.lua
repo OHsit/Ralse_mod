@@ -41,7 +41,7 @@ SMODS.PokerHand ({
     end,
 
     modify_display_text = function (self, cards, scoring_hand)
-        return "pkr_youstupid"
+        return pkr_youstupid
     end,
 })
 
