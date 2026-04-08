@@ -19,5 +19,8 @@ SMODS.Joker {
             return {
                 balance = true          }
         end
+    end,
+    in_pool = function (self, args)
+        return {allow_duplicates = false}
     end
 }

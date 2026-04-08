@@ -13,6 +13,16 @@ local PH_src = SMODS.NFS.getDirectoryItems(SMODS.current_mod.path .. "src/blinds
 for _, file in ipairs(PH_src) do
     assert(SMODS.load_file("src/blinds/" .. file))()
 end
+--load seals
+local PH_src = SMODS.NFS.getDirectoryItems(SMODS.current_mod.path .. "src/seals")
+for _, file in ipairs(PH_src) do
+    assert(SMODS.load_file("src/seals/" .. file))()
+end
+--load decks
+local PH_src = SMODS.NFS.getDirectoryItems(SMODS.current_mod.path .. "src/decks")
+for _, file in ipairs(PH_src) do
+    assert(SMODS.load_file("src/decks/" .. file))()
+end
 
 
 --Ralse mod pool

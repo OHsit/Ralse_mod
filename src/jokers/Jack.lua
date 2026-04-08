@@ -1,13 +1,13 @@
 SMODS.Atlas {
-    key = 'placeholder',
-    path = 'placeholder.png',
+    key = 'jack_atlas',
+    path = 'jakc_black.png',
     px = 71,
     py = 95
 }
 
 SMODS.Joker {
     key = 'JackB',
-    atlas = 'placeholder',
+    atlas = 'jack_atlas',
     pos = {x=0,y=0},
     config = {extra={xchips = 2}},
     unlocked = true,

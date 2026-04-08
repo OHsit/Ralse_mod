@@ -1,6 +1,6 @@
 SMODS.Atlas {
-    key = 'placeholder',
-    path = 'placeholder.png',
+    key = 'Kingthe3',
+    path = 'Baronthe3.png',
     px = 71,
     py = 95
 }
@@ -8,7 +8,7 @@ SMODS.Atlas {
 
 SMODS.Joker {
     key = 'Kingthe3',
-    atlas = 'placeholder',
+    atlas = 'Kingthe3',
     pos={x=0,y=0},
     unlocked = true,
     discovered = true,
@@ -47,5 +47,8 @@ SMODS.Joker {
                 end
             }
         end
+    end,
+        in_pool = function (self, args)
+        return {allow_duplicates = false}
     end
 }

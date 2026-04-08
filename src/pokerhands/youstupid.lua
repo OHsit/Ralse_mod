@@ -47,10 +47,10 @@ SMODS.PokerHand ({
 
 
 SMODS.Atlas {
-    key = 'placeholder',
+    key = 'p_placeholder',
     path ='p_placeholder.png',
     px = 71,
-    py = 96,
+    py = 95,
 }
 
 SMODS.Sound({key="21",path="21_3.ogg",})
@@ -71,10 +71,10 @@ SMODS.Consumable({
 
     pos = {x=0,y=0},
     order = 99,
-    atlas = "placeholder",
+    atlas = "p_placeholder",
     unlocked = true,
     cost =6,
-    hidden = true,
+    hidden = false,
 
     use = function (self, card, area, copier)
         SMODS.smart_level_up_hand(card,"jeej_pkr_youstupid")
