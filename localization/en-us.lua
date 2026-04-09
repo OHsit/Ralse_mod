@@ -84,6 +84,19 @@ return {
                     "Debuffs non-face cards"
                 }
             },
+            bl_jeej_oneshot = {
+                name = "OneShot",
+                text  = {
+                    "Only 1 hand and 0 discards"
+                }
+            },
+            bl_jeej_vanilla_jack = {
+                name = "Vanilla Jack",
+                text  = {
+                    "Disables all",
+                    "RALSE MOD Jokers"
+                }
+            }
         }
     }
 }

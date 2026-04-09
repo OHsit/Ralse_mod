@@ -11,13 +11,13 @@ SMODS.Back {
     apply = function (self,back)
         G.E_MANAGER:add_event(Event({
             func = function ()
-                local card = create_card("Joker",G.jokers,true,4,nil,nil,nil,"")
-                card:set_edition({ negative = true })
-                		card:add_to_deck()
+                local card = SMODS.add_card({set = 'Ralseaddtiton', edition = 'e_negative'})
 						card:start_materialize()
-						G.jokers:emplace(card)
 						return true
             end
         }))
     end
 }
+
+--SMODS.add_card({set = 'poolkey', edition = 'e_negative'})
+--Ralseaddtiton

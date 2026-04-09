@@ -1,12 +1,12 @@
 SMODS.Atlas {
-    key = 'placeholder',
-    path = 'placeholder.png',
+    key = 'perfect_hand',
+    path = 'perfect_hand.png',
     px = 71,
     py = 95
 }
 SMODS.Joker {
     key = "bestahand",
-    atlas = 'placeholder',
+    atlas = 'perfect_hand',
     pos = {x=0,y=0},
     unlocked = true,
     discovered = true,

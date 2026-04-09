@@ -1,6 +1,7 @@
 SMODS.Seal {
     key = 'black',
     name = 'black',
+    pos = { x = 5, y = 4 },
     badge_colour = HEX("000000"),
     config = {extra={money=2,retriggers=2}},
     loc_txt = {

@@ -1,3 +1,29 @@
+SMODS.PokerHandPart {
+    key = 'you_stupid',
+    func = function (hand)
+            if #hand >= 2 then
+            local _has2 = false
+            local _hasAce =false
+            local eligible_cards = {}
+
+            for i,card in ipairs(hand) do
+                if card:get_id() == 2 and _has2 == false then
+                    _has2 = true
+                    eligible_cards[#eligible_cards+1] = card
+                elseif card:get_id() == 14 and _hasAce == false then
+                    _hasAce = true
+                    eligible_cards[#eligible_cards+1] = card
+                end
+            end
+
+            if _has2  and _hasAce then
+                return {eligible_cards}
+            end
+        end
+    end
+}
+
+
 SMODS.PokerHand ({
     key = "pkr_youstupid",
     chips = 9,
@@ -18,25 +44,9 @@ SMODS.PokerHand ({
     visible = true,
 
     evaluate = function (parts,hand)
-        if #hand >= 2 then
-            local _has2 = false
-            local _hasAce =false
-            local eligible_cards = {}
-            local other_hands = next(parts._flush) or next(parts._straight) or next(parts._all_pairs)
-
-            for i,card in ipairs(hand) do
-                if card:get_id() == 2 and _has2 == false then
-                    _has2 = true
-                    eligible_cards[#eligible_cards+1] = card
-                elseif card:get_id() == 14 and _hasAce == false then
-                    _hasAce = true
-                    eligible_cards[#eligible_cards+1] = card
-                end
-            end
-
-            if _has2  and _hasAce and not other_hands then
-                return {eligible_cards}
-            end
+        local other_hands = next(parts._flush) or next(parts._straight) or next(parts._all_pairs)
+        if not other_hands then
+            return parts.jeej_you_stupid
         end
     end,
 

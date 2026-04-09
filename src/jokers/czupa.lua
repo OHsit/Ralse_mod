@@ -16,25 +16,29 @@ SMODS.Joker {
     cost = 21,
     config = {extra={basexmult = 1,gainxmult=1}},
     loc_vars = function (self, info_queue, card)
-        return{card.ability.extra.basexmult,card.ability.extra.gainxmult}
+        return{vars = {card.ability.extra.basexmult,card.ability.extra.gainxmult}}
     end,
-    calculate = function (self,card,context)
-        if context.setting_blind and not context.retrigger_joker then
-            for i = 1, #G.jokers.cards do
-                if G.jokers.cards[i].config.center.pools and G.jokers.cards[i].config.center.pools.Food then
-                    G.jokers.cards[i].getting_sliced = true
-                    G.jokers.cards[i]:start_dissolve()
-                    SMODS.scale_card(card, {
-                    ref_table = card.ability.extra,
-                    ref_value = "basexmult",
-                    scalar_value = "gainxmult"
-                      })
-                    return {message = "Yummy!"}
-                end
-                end
+calculate = function(self, card, context)
+    if context.setting_blind then
+        local destroyed_cards = {}
+        for k, v in pairs(G.jokers.cards) do
+            if v:has_attribute('food') then
+                table.insert(destroyed_cards, v)
+            end
         end
-        if context.joker_main then
-            return {Xmult_mod = card.ability.extra.basexmult}
+        if next(destroyed_cards) then
+            SMODS.destroy_cards(destroyed_cards)
+            SMODS.scale_card(card, {
+                ref_table = card.ability.extra,
+                ref_value = 'basexmult',
+                scalar_value = 'gainxmult',
+                no_message = true
+            })
+            return {message = localize({type = 'variable', key = 'a_xmult', vars = {card.ability.extra.basexmult}}), colour = G.C.MULT}
         end
     end
+    if context.joker_main then
+        return {xmult = card.ability.extra.basexmult}
+    end
+end
 }

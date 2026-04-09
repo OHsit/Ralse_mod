@@ -1,9 +1,19 @@
+SMODS.Atlas {
+    key = 'parasite_atlas',
+    px =34,
+    py = 34,
+    path = 'Blind_parasite.png',
+    frames = 21,
+    atlas_table = 'ANIMATION_ATLAS'
+}
+
+
 SMODS.Blind {
     key = 'parasite',
+    atlas = 'parasite_atlas',
     dollars = 10,
     mult = 3,
     debuff = {},
-    pos = {x=0,y=7}, --placeholder
     boss ={min = 4},
     boss_colour = HEX("083000"),
 

@@ -1,13 +1,13 @@
 SMODS.Atlas {
-    key = 'placeholder',
-    path = 'placeholder.png',
+    key = 'balanced_atlas',
+    path = 'Perfectly_balanced_ver1.png',
     px = 71,
     py = 95
 }
 
 SMODS.Joker {
     key = 'balanced',
-    atlas = 'placeholder',
+    atlas = 'balanced_atlas',
     pools = {["Ralseaddtiton"] = true},
     pos = {x=0,y=0},
     eternal_compat = true,
