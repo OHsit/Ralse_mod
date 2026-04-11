@@ -33,6 +33,11 @@ local PH_src = SMODS.NFS.getDirectoryItems(SMODS.current_mod.path .. "src/skipta
 for _, file in ipairs(PH_src) do
     assert(SMODS.load_file("src/skiptags/" .. file))()
 end
+--load stakes
+local Stakes_src = SMODS.NFS.getDirectoryItems(SMODS.current_mod.path .. "src/stakes")
+for _,file in ipairs(Stakes_src) do
+    assert(SMODS.load_file("src/stakes/" .. file))()
+end
 
 
 

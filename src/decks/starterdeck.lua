@@ -1,5 +1,13 @@
+SMODS.Atlas  {
+    key = 'starter_atlas',
+    path = 'back_starter.png',
+    px = 71,
+    py = 95
+}
+
 SMODS.Back {
     key = 'start_deck',
+    atlas = 'starter_atlas',
     loc_txt = {
         name = 'Starter deck',
         text = {

@@ -1,13 +1,13 @@
 SMODS.Atlas {
-    key = 'placeholder',
-    path = 'placeholder.png',
+    key = 'placeholder_czupa',
+    path = 'czupa_placeholder.png',
     px = 71,
     py = 95
 }
 
 SMODS.Joker {
     key = 'czupa',
-    atlas = 'placeholder',
+    atlas = 'placeholder_czupa',
     pools = {["Ralseaddtiton"] = true},
     pos = {x=0,y=0},
     eternal_compat = true,
