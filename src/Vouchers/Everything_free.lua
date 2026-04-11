@@ -6,6 +6,7 @@ SMODS.Atlas {
 }
 SMODS.Voucher {
     key = 'free',
+    atlas = 'atlas_free',
     config = {extra = {percent = 100}},
     loc_txt = {
         name = 'EVRYTHING IS FUCKIN FREE SALE',
@@ -23,7 +24,7 @@ SMODS.Voucher {
     redeem = function (self,card)
         G.E_MANAGER:add_event(Event({
             func = function ()
-                G.GAME.discount_perecent = card.ability.extra.percent
+                G.GAME.discount_percent = card.ability.extra.percent
                 for _,v in pairs(G.I.CARD) do
                     if v.set_cost then v:set_cost() end
                 end

@@ -38,6 +38,16 @@ local Stakes_src = SMODS.NFS.getDirectoryItems(SMODS.current_mod.path .. "src/st
 for _,file in ipairs(Stakes_src) do
     assert(SMODS.load_file("src/stakes/" .. file))()
 end
+--load vouchers
+local Voucher_src =SMODS.NFS.getDirectoryItems(SMODS.current_mod.path .. "src/Vouchers")
+for _,file in ipairs(Voucher_src) do
+    assert(SMODS.load_file("src/Vouchers/" .. file))()
+end
+--load Stickers
+local Sticker_src = SMODS.NFS.getDirectoryItems(SMODS.current_mod.path .. "src/Stickers")
+for _,file in ipairs(Sticker_src) do
+    assert(SMODS.load_file("src/Stickers/" .. file))()
+end
 
 
 

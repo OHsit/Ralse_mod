@@ -13,7 +13,7 @@ return {
                     'When {}{s:1.5,C:attention}3{} is scored:',
                     'Retrigger {}{s:1.5,C:attention}3{} times',
                     'or gain {}{X:mult,C:white}X#1#',
-                    '(currently {}{X:mult,C:white}X#2#{})'
+                    '{C:inactive}(Currently {}{X:mult,C:white}X#2#{}{C:inactive})'
                 }
             },
             j_jeej_balanced = {
@@ -43,7 +43,7 @@ return {
                 text = {
                     'Gain {C:attention}+#2#${} for each played face card,',
                     'resets after beating boss blind',
-                    '(currently {C:attention}#1#${})'
+                    '{C:inactive}(Currently {C:attention}#1#${}{C:inactive})'
                 }
             },
             j_jeej_yellow_joker = {
@@ -51,7 +51,7 @@ return {
                 text = {
                     "{C:attention}+#1#${} for each",
                     "remaining card in {C:attention}deck",
-                    "{C:inactive}(Currently {C:attention}+#2#${})"
+                    "{C:inactive}(Currently {C:attention}+#2#${}{C:inactive})"
                 }
             },
             j_jeej_bestahand = {
@@ -66,9 +66,18 @@ return {
                 text = {
                     "When theres a food card in one of your joker slots",
                     "Its going to be eaten and this joker will gain {X:mult,C:white}X#2#",
-                    "(Currently {X:mult,C:white}X#1#{})"
+                    "{C:inactive}(Currently {X:mult,C:white}X#1#{}{C:inactive})"
                 }
             },
+            j_jeej_wildmen = {
+                name = "Wild Men",
+                text  = {
+                    "When {C:attention}Wild card{} is played",
+                    "Joker will gain{C:mult}+#2# mult{}",
+                    "and will retrigger card {C:attention}#3#{} times",
+                    "{C:inactive}(Currently {C:mult}+#1# mult{}{C:inactive})"
+                }
+            }
         },
         Blind = {
             bl_jeej_FITH = {
@@ -95,6 +104,32 @@ return {
                 text  = {
                     "Disables all",
                     "RALSE MOD Jokers"
+                }
+            },
+        },
+        Stake = {
+            stake_jeej_PandY = {
+                name = "Pink and yellow stake",
+                text = {
+                    "Swaps mult and chips"
+                }
+            }
+        },
+        Other = {
+            jeej_fergile = {
+                name = "Fergile",
+                text  = {
+                    '{C:attention}#1# in #2#{} chance',
+                    'that joker is destoryed',
+                    'at the of the round'
+                }
+            },
+            jeej_very_fergile = {
+                name = "Very Fergile",
+                text = {
+                    '{C:attention}#1# in #2#{} chance',
+                    'that joker is destoryed',
+                    'at the of the round'
                 }
             }
         }
