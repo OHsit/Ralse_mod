@@ -18,11 +18,11 @@ SMODS.PokerHand ({
     },
     visible = true,
 
-    evaluate = function (parts,hand)
-        local other_hands =  next(parts._straight) or next(parts._all_pairs)
+    evaluate = function (parts,hand) --idk how to fix for now just dosnet work
+        local other_hands =  next(parts._straight) or next(parts._all_pairs) or next(parts._flush)
         if next(parts.jeej_you_stupid) and next(parts._flush)then
             if not other_hands then
-                return {SMODS.merge_lists(parts.jeej_you_stupid,parts._flush)}
+                return {SMODS.merge_lists(parts.jeej_you_stupid)}
             end
         end
     end,
@@ -49,7 +49,7 @@ SMODS.Consumable({
     object_type = "Consumable",
     name = "jeej_starplanet21",
     loc_txt = {
-        name = "Start of planet nr. 21",
+        name = "Star of planet nr. 21",
         text = {
             "You stupid!",
         },

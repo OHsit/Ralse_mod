@@ -57,8 +57,8 @@ return {
             j_jeej_bestahand = {
                 name = "Looking for best hand",
                 text = {
-                    "Each round gain {C:Red}+#1#{} discards",
-                    "but you have only {C:Blue}#2#{} hand"
+                    "Each round gain {C:red}+#1#{} discards",
+                    "but you have only {C:blue}#2#{} hand"
                 }
             },
             j_jeej_czupa = {

@@ -1,7 +1,13 @@
+SMODS.Atlas {
+    key = 'atlas_balck_seal',
+    path = 'black_seal.png',
+    px = 71,
+    py = 96
+}
 SMODS.Seal {
     key = 'black',
     name = 'black',
-    pos = { x = 5, y = 4 },
+    atlas = 'atlas_balck_seal',
     badge_colour = HEX("000000"),
     config = {extra={money=2,retriggers=2}},
     loc_txt = {
