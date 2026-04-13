@@ -48,6 +48,11 @@ local Sticker_src = SMODS.NFS.getDirectoryItems(SMODS.current_mod.path .. "src/S
 for _,file in ipairs(Sticker_src) do
     assert(SMODS.load_file("src/Stickers/" .. file))()
 end
+--load Spectrals 
+local Spectral_src = SMODS.NFS.getDirectoryItems(SMODS.current_mod.path .. "src/spectrals")
+for _,file in ipairs(Spectral_src) do
+    assert(SMODS.load_file("src/spectrals/" .. file))()
+end
 
 
 

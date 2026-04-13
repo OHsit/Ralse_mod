@@ -63,6 +63,13 @@ SMODS.Atlas {
     py = 95,
 }
 
+SMODS.Atlas {
+    key = 'r_consumables',
+    path = 'Consumables_rasle1.png',
+    px = 71,
+    py = 95,
+}
+
 SMODS.Sound({key="21",path="21_3.ogg",})
 
 
@@ -79,9 +86,9 @@ SMODS.Consumable({
     },
 
 
-    pos = {x=0,y=0},
+    pos = {x=2,y=0},
     order = 99,
-    atlas = "p_placeholder",
+    atlas = "r_consumables",
     unlocked = true,
     cost =6,
     hidden = false,

@@ -1,6 +1,8 @@
 SMODS.Consumable {
     key = 'devils_ore',
     set = 'Tarot',
+    atlas = 'r_consumables',
+    pos = {x=1,y=0},
     config = {max_highlighted = 1, extra = 'black'},
     loc_vars = function (self,info_queue,card)
         info_queue[#info_queue+1] = G.P_SEALS[(card.ability or self.config).extra]

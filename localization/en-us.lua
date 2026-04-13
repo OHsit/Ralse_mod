@@ -19,7 +19,7 @@ return {
             j_jeej_balanced = {
                 name = 'Perfectly Balanced',
                 text = {
-                    '{E:1}Balances{} your {C:blue}hand'
+                    '{E:1,C:EDITION}Balances{} your {C:blue}hand'
                 }
             },
 
@@ -106,12 +106,42 @@ return {
                     "RALSE MOD Jokers"
                 }
             },
+            bl_jeej_Big_wall = {
+                name = 'Comically large wall',
+                text =  {
+                 'Comically large blind size'
+                }
+            }
         },
         Stake = {
             stake_jeej_PandY = {
                 name = "Pink and yellow stake",
                 text = {
                     "Swaps mult and chips"
+                }
+            },
+            stake_jeej_stake_stake = {
+                name = "Stake Stake",
+                text = {
+                    '{C:red}-1{} joker slot'
+                }
+            },
+            stake_jeej_Gstake = {
+                name = 'Glass Stake',
+                text  = {
+                    'Cards can have a Fergile sticker'
+                }
+            },
+            stake_jeej_2fort = {
+                name = '2fort stake',
+                text = {
+                    "Blind will scale really fast"
+                }
+            },
+            stake_jeej_GrStake = {
+                name = 'Glass breaking green screen stake',
+                text = {
+                    'Cards can now have Very Fergile sticker'
                 }
             }
         },
