@@ -123,7 +123,7 @@ return {
             stake_jeej_stake_stake = {
                 name = "Stake Stake",
                 text = {
-                    '{C:red}-1{} joker slot'
+                    'Winnig ante is now 11'
                 }
             },
             stake_jeej_Gstake = {
@@ -148,6 +148,7 @@ return {
         Other = {
             jeej_fergile = {
                 name = "Fergile",
+                label = "Fregile",
                 text  = {
                     '{C:attention}#1# in #2#{} chance',
                     'that joker is destoryed',
@@ -156,6 +157,7 @@ return {
             },
             jeej_very_fergile = {
                 name = "Very Fergile",
+                label = "Very Fregile",
                 text = {
                     '{C:attention}#1# in #2#{} chance',
                     'that joker is destoryed',

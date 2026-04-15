@@ -14,6 +14,6 @@ SMODS.Stake {
     prefix_config = {above_stake = {mod = false}, applied_stakes = {mod = false}},
     shiny = false,
     modifiers = function ()
-        G.GAME.starting_params.joker_slot = G.GAME.starting_params.joker_slot -1
+        G.GAME.win_ante = 11
     end
 }

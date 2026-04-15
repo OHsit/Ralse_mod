@@ -14,18 +14,19 @@ SMODS.Voucher {
             'EVERYTHING!',
             'IS!',
             'FUCKIN!',
-            'FREE!'
+            'FREE!*',
+            '*{C:inactive}(Everything is set to {C:attention}$1{} expect rerolls)'
         }
     },
-    requiers = {'v_liquidation'},
+    requires = {'v_liquidation'},
     loc_vars = function (self,info_queue,card)
         return {vars = {card.ability.extra.percent}}
     end,
     redeem = function (self,card)
         G.E_MANAGER:add_event(Event({
             func = function ()
-                G.GAME.discount_percent = card.ability.extra.percent
-                for _,v in pairs(G.I.CARD) do
+                G.GAME.discount_perecent = card.ability.extra.percent
+                for _, v in pairs(G.I.CARD) do
                     if v.set_cost then v:set_cost() end
                 end
                 return true

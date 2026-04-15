@@ -1,0 +1,1 @@
+--this like main.lua for this consumable

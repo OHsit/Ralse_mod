@@ -1,3 +1,9 @@
+SMODS.Atlas {
+    key = 'star21_atlas',
+    path = 'star_21.png',
+    px = 71,
+    py = 95,
+}
 
 SMODS.PokerHand ({
     key = "pkr_stupidflush",
@@ -33,14 +39,7 @@ SMODS.PokerHand ({
 })
 
 
-SMODS.Atlas {
-    key = 'p_placeholder',
-    path ='p_placeholder.png',
-    px = 71,
-    py = 95,
-}
-
-SMODS.Sound({key="21",path="21_3.ogg",})
+SMODS.Sound({key="21_nah",path="nah.ogg",})
 
 
 SMODS.Consumable({
@@ -58,14 +57,14 @@ SMODS.Consumable({
 
     pos = {x=0,y=0},
     order = 99,
-    atlas = "p_placeholder",
+    atlas = "star21_atlas",
     unlocked = true,
     cost =6,
     hidden = false,
 
     use = function (self, card, area, copier)
         SMODS.smart_level_up_hand(card,"jeej_pkr_stupidflush")
-        play_sound("jeej_21")
+        play_sound("jeej_21_nah")
     end,
 
     can_use = function ()

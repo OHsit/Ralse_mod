@@ -1,16 +1,16 @@
 SMODS.Sound {
     key = 'snd_three',
-    path = 'BAL_threetwoone_3.ogg',
+    path = 'BAL_Math_3_Classic.ogg',
 }
 
 
-SMODS.Atlas {
+SMODS.Atlas { -- need to fix atlas but im to fucking lazy
     key = 'baldi',
     path = 'three.png',
     px = 71,
-    py = 95,
+    py = 96,
     atlas_table = 'ANIMATION_ATLAS',
-    frames = 8,
+    frames = 63,
     disable_mipmap = true
 }
 

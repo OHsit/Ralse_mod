@@ -1,6 +1,15 @@
+SMODS.Atlas {
+    key = 'tags_atlas',
+    path = 'skiptags.png',
+    px = 34,
+    py = 34
+}
+
 SMODS.Tag {
     key = 'thinking',
+    atlas = 'tags_atlas',
     requires = "j_brainstorm","j_blueprint",
+    min_ante = 1,
     loc_txt = {
         name = "Negative thinking",
         text = {
@@ -9,7 +18,7 @@ SMODS.Tag {
         }
     },
     apply = function (self, tag, context) -- idk how it spawns 2 time im not smart enugh
-        if context.type == "store_joker_create" then
+        if context.type == "immediate" then
             local card
             local card2
             if not G.GAME.banned_keys["j_brainstorm"] and not G.GAME.banned_keys["j_blueprint"]  then
