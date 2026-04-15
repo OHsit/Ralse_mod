@@ -53,6 +53,11 @@ local Spectral_src = SMODS.NFS.getDirectoryItems(SMODS.current_mod.path .. "src/
 for _,file in ipairs(Spectral_src) do
     assert(SMODS.load_file("src/spectrals/" .. file))()
 end
+--load enchancments
+local encha_src = SMODS.NFS.getDirectoryItems(SMODS.current_mod.path .. "src/enchancments")
+for _,file in ipairs(encha_src) do
+    assert(SMODS.load_file("src/enchancments/" .. file))()
+end
 
 
 
