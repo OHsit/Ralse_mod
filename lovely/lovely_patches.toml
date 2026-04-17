@@ -11,14 +11,14 @@ pattern = "elseif eval_type == 'dollars' then"
 position = "before"
 payload = '''
 elseif eval_type == 'e_chips' and not (SMODS.Mods["Talisman"] or {}).can_load then
-    sound = 'cryl_echips'
+    sound = 'jeej_echips'
     amt = amt
     text = '^' .. number_format(amt) .. ' ' .. localize('k_chips')
     colour = G.C.DARK_EDITION
     config.type = 'fade'
     config.scale = 0.7
 elseif eval_type == 'e_mult' and not (SMODS.Mods["Talisman"] or {}).can_load then
-    sound = 'cryl_emult'
+    sound = 'jeej_emult'
     amt = amt
     text = '^' .. number_format(amt) .. ' ' .. localize('k_mult')
     colour = G.C.DARK_EDITION

@@ -5,7 +5,7 @@ SMODS.Shader {
 
 SMODS.Edition {
     key = 'wired',
-    shader = 'wired',
+    shader = 'jeej_wired',
     unlocked = true,
     discovered = true
 }
