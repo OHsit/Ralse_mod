@@ -84,6 +84,10 @@ for _, file in ipairs(tarrot_src) do
     print("[RALSEMOD] Loading lua file " .. file)
     assert(SMODS.load_file("src/tarot/" .. file))()
 end
+for _,file in ipairs(prohpecy_src) do
+    print("[RALSEMOD] Loading lua file " .. file)
+    assert(SMODS.load_file("src/prohpecy/" .. file))()
+end
 --#endregion 
 --#region lib folder
 --Load lib files
@@ -99,7 +103,7 @@ end
 --#endregion
 --#region locals
 --Load Localization file
-local files = NFS.getDirectoryItems(mod_path .. "localization")
+local files = NFS.getDirectoryItems(Ralse_path .. "localization")
 for _, file in ipairs(files) do
 	print("[YAHIMOD] Loading localization file " .. file)
 	local f, err = SMODS.load_file("localization/" .. file)
