@@ -1,0 +1,28 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+prirorty = -1
+
+#checks if talisman is not installed cuz ^chips ^mult comes from there i guess
+[[patches]]
+[patches.pattern]
+target = "functions/common_events.lua"
+pattern = "elseif eval_type == 'dollars' then"
+position = "before"
+payload = '''
+elseif eval_type == 'e_chips' and not (SMODS.Mods["Talisman"] or {}).can_load then
+    sound = 'cryl_echips'
+    amt = amt
+    text = '^' .. number_format(amt) .. ' ' .. localize('k_chips')
+    colour = G.C.DARK_EDITION
+    config.type = 'fade'
+    config.scale = 0.7
+elseif eval_type == 'e_mult' and not (SMODS.Mods["Talisman"] or {}).can_load then
+    sound = 'cryl_emult'
+    amt = amt
+    text = '^' .. number_format(amt) .. ' ' .. localize('k_mult')
+    colour = G.C.DARK_EDITION
+    config.type = 'fade'
+    config.scale = 0.7
+'''
+match_indent = true
