@@ -21,7 +21,7 @@ SMODS.Enhancement {
         return {vars = {card.ability.h_chips}}
     end,
     calculate = function (self, card, context)
-        	if context.end_of_round and not context.individual and not context.repetition then
+        	if context.end_of_round and context.individual and not context.repetition then
                 card.ability.h_chips = card.ability.h_chips * card.ability.timesvaule
             return {
                 message = localize('k_upgrade_ex')
