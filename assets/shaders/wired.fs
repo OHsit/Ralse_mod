@@ -10,8 +10,8 @@ extern PRECISION number time;
 extern PRECISION vec4 texture_details;
 extern PRECISION vec2 image_details;
 extern bool shadow;
-extern PRECISION vec4 burn_texour_1;
-extern PRECISION vec4 burn_texour_2;
+extern PRECISION vec4 burn_colour_1;
+extern PRECISION vec4 burn_colour_2;
 uniform sampler2D iChannel0;
 uniform sampler2D iChannel1;
 uniform sampler2D iChannel2;
@@ -20,7 +20,7 @@ uniform sampler2D iChannel3;
 
 vec4 dissolve_mask(vec4 tex,vec2 texture_coords,vec2 uv);
 
-vec4 effect(vec4 texour,Image texture,vec2 texture_coords,vec2 screen_coords)
+vec4 effect(vec4 colour,Image texture,vec2 texture_coords,vec2 screen_coords)
 {
         // Take pixel texor (rgba) from `texture` at `texture_coords`, equivalent of texture2D in GLSL
     vec4 tex = Texel(texture, texture_coords);
@@ -44,20 +44,19 @@ vec4 effect(vec4 texour,Image texture,vec2 texture_coords,vec2 screen_coords)
     //funny find and replace
     t += tex.r + tex.g + tex.b + wired.x + wired.y;
     const int texorSize = 4;
-    vec3 texor[texorSize] = vec3[](
-    vec3(250.0/255.0, 62.0/255.0, 87.0/255.0); //whre dufuq  is sytanxerrrrrrrrrrrorrFUCKINN WERE?!?!?!?!!?!?
-    vec3(252.0/255.0, 210.0/255.0, 83.0/255.0);
-    vec3(90.0/255.0, 252.0/255.0, 58.0/255.0);
-    vec3(71.0/255.0, 197.0/255.0, 255.0/255.0);
-    ); //lets try this...
+
+    vec3 texor0 = vec3(250.0/255.0, 62.0/255.0, 87.0/255.0);
+    vec3 texor1 = vec3(252.0/255.0, 210.0/255.0, 83.0/255.0);
+    vec3 texor2 = vec3(90.0/255.0, 252.0/255.0, 58.0/255.0);
+    vec3 texor3 = vec3(71.0/255.0, 197.0/255.0, 255.0/255.0);
 
     int c0 = int(floor(mod(t,float(texorSize))));
     int c1 = int(mod(float(c0+1), float(texorSize)));
     float m = mod(t, tMax / float(texorSize));
-    vec3 gggerg = mix(texors[c0], texors[c1], m);
-    vec3 bustclor = mix(tex,gggreg,min(1.0, cttex + 0.1));
+    vec3 gggerg = mix(texor0, texor1, m);
+    vec3 bustclor = mix(tex.rgb,gggerg,min(1.0, cttex + 0.1));
 
-    tex.rgb = vec4(bustclor,1.0); //praying it will work; Im forggeting about this stupid semicolons
+    tex.rgb = bustclor; //praying it will work; Im forggeting about this stupid semicolons
     
     return dissolve_mask(tex*colour, texture_coords, uv);
 }
@@ -90,11 +89,11 @@ vec4 dissolve_mask(vec4 tex, vec2 texture_coords, vec2 uv)
     - (floored_uv.x < borders.x ? (borders.x - floored_uv.x)*(5. + 5.*dissolve) : 0.)*(dissolve)
     - (floored_uv.y < borders.x ? (borders.x - floored_uv.y)*(5. + 5.*dissolve) : 0.)*(dissolve);
 
-    if (tex.a > 0.01 && burn_texour_1.a > 0.01 && !shadow && res < adjusted_dissolve + 0.8*(0.5-abs(adjusted_dissolve-0.5)) && res > adjusted_dissolve) {
+    if (tex.a > 0.01 && burn_colour_1.a > 0.01 && !shadow && res < adjusted_dissolve + 0.8*(0.5-abs(adjusted_dissolve-0.5)) && res > adjusted_dissolve) {
         if (!shadow && res < adjusted_dissolve + 0.5*(0.5-abs(adjusted_dissolve-0.5)) && res > adjusted_dissolve) {
-            tex.rgba = burn_texour_1.rgba;
-        } else if (burn_texour_2.a > 0.01) {
-            tex.rgba = burn_texour_2.rgba;
+            tex.rgba = burn_colour_1.rgba;
+        } else if (burn_colour_2.a > 0.01) {
+            tex.rgba = burn_colour_2.rgba;
         }
     }
 

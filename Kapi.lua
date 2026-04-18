@@ -105,7 +105,7 @@ end
 --Load Localization file
 local files = NFS.getDirectoryItems(Ralse_path .. "localization")
 for _, file in ipairs(files) do
-	print("[YAHIMOD] Loading localization file " .. file)
+	print("[RALSEMOD] Loading localization file " .. file)
 	local f, err = SMODS.load_file("localization/" .. file)
 	if err then
 		error(err) 
