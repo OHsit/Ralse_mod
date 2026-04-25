@@ -145,6 +145,10 @@ return {
                 }
             }
         },
+        Edition = {
+            edition_jeej_wired = {
+            }
+        },
         Other = {
             jeej_fergile = {
                 name = "Fergile",

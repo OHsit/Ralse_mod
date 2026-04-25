@@ -6,7 +6,7 @@ Ralse = SMODS.current_mod
 Ralse_path = SMODS.current_mod.path
 
 --#region SMODS Optional Features Im turing on
-Ralse.optional_features = {retrigger_joker = true,post_trigger= true}
+SMODS.current_mod.optional_features = { retrigger_joker = true, post_trigger = true }
 --#endregion
 
 

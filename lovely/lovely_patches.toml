@@ -1,7 +1,7 @@
 [manifest]
 version = "1.0.0"
 dump_lua = true
-prirorty = -1
+priority = -1
 
 #checks if talisman is not installed cuz ^chips ^mult comes from there i guess
 [[patches]]
@@ -24,5 +24,16 @@ elseif eval_type == 'e_mult' and not (SMODS.Mods["Talisman"] or {}).can_load the
     colour = G.C.DARK_EDITION
     config.type = 'fade'
     config.scale = 0.7
+'''
+match_indent = true
+#legenadry thing
+[[patches]]
+[patches.pattern]
+target = 'game.lua'
+pattern = '''
+unused_discards = 0, '''
+position = 'after'
+payload = '''
+kapi_legendary_pool = {in_shop = false,rate = 1.00},
 '''
 match_indent = true

@@ -25,6 +25,6 @@ SMODS.Joker {
         G.GAME.round_resets.hands = card.ability.extra.hands
     end,
     remove_from_deck = function (self,card,form_debuff)
-        G.GAME.round_resets.discards = G.GAME.round_resets.discards - card.ability.extra.discard
+        G.GAME.round_resets.discards = G.GAME.round_resets.discards - card.ability.extra.discards
     end
 }
